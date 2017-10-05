@@ -1,15 +1,32 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>DaMaGotchi</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    Why hello there ;)
-  </p>
-  <p>
-    hallow
-  </p>
+  <h2>DaMaGotchi</h2>
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="name" placeholder="Steve"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-option value="Female">Female</ion-option>
+      <ion-option value="Male">Male</ion-option>
+      <ion-option value="Apache Helicopter">Apache Helicopter</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Birthday</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="birthday"></ion-datetime>
+  </ion-item>
+
+  <button ion-button (click)="startGame()">Create your DaMaGotchi</button>
+  <button ion-button *ngIf="gameAvailable" (click)="resumeGame()">Resume Game.</button>
+
 </ion-content>

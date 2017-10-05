@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>DaMaGotchi</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ul>
+    <li>
+      Name: {{damagotchi?.name}}
+    </li>
+    <li>
+      Gender: {{damagotchi?.gender}}
+    </li>
+    <li>
+      Date of Birth: {{damagotchi?.birthday}}
+    </li>
+    <li>
+      Life: {{damagotchi?.lifePoints}}
+    </li>
+    <li>
+      Food: {{damagotchi?.foodLevel}}
+    </li>
+    <li>
+      Sick: {{damagotchi?.sickLevel}}
+    </li>
+    <li>
+      Toilet: {{damagotchi?.toiletLevel}}
+    </li>
+    <li>
+      Sleep: {{damagotchi?.tiredLevel}}
+    </li>
+    <li>
+      Happy: {{damagotchi?.happiness}}
+    </li>
+  </ul>
+  <button ion-button (click)="saveProgress()">Save Progress!</button>
+  <button ion-button (click)="backToHome()">Back Home</button>
+
+</ion-content>
